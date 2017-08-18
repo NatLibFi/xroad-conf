@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+                  xmlns:tns="http://vrk-test.x-road.fi/producer" 
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+                  xmlns:xrd="http://x-road.eu/xsd/xroad.xsd"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:id="http://x-road.eu/xsd/identifiers"
+                  name="provider-gateway" targetNamespace="http://vrk-test.x-road.fi/producer">
+    <wsdl:types>
+        <xsd:schema elementFormDefault="qualified" targetNamespace="http://vrk-test.x-road.fi/producer">
+            <!-- Import X-Road schema -->
+            <xsd:import id="xrd" namespace="http://x-road.eu/xsd/xroad.xsd" schemaLocation="http://x-road.eu/xsd/xroad.xsd"/>
+            
+            <xsd:element name="fintoService">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="request">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="vocab" type="xsd:string" />
+                                    <xsd:element name="query" type="xsd:string" />
+                                    <xsd:element name="lang" type="xsd:string" />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="fintoServiceResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="request">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="vocab" type="xsd:string" />
+                                    <xsd:element name="query" type="xsd:string" />
+                                    <xsd:element name="lang" type="xsd:string" />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="response">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="data" type="xsd:string" />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="finnaSearchService">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="request">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="vocab" type="xsd:string" />
+                                    <xsd:element name="query" type="xsd:string" />
+                                    <xsd:element name="lang" type="xsd:string" />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="finnaSearchServiceResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="request">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="vocab" type="xsd:string" />
+                                    <xsd:element name="query" type="xsd:string" />
+                                    <xsd:element name="lang" type="xsd:string" />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="response">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="data" type="xsd:string" />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="finnaRecordService">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="request">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="vocab" type="xsd:string" />
+                                    <xsd:element name="query" type="xsd:string" />
+                                    <xsd:element name="lang" type="xsd:string" />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="finnaRecordServiceResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="request">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="vocab" type="xsd:string" />
+                                    <xsd:element name="query" type="xsd:string" />
+                                    <xsd:element name="lang" type="xsd:string" />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="response">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="data" type="xsd:string" />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>  
+            <xsd:element name="getFinnaRecord">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="request">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:any />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getFinnaRecordResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="request">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:any />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="response">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:any />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>                                        
+            <xsd:complexType name="organization">
+                <xsd:all>
+                    <xsd:element name="id" type="xsd:int" />
+                    <xsd:element name="name_fi" type="xsd:string" />
+                    <xsd:element name="name_sv" type="xsd:string" />
+                    <xsd:element name="name_en" type="xsd:string" />
+                    <xsd:element name="data_source_url" type="xsd:string" />
+                </xsd:all>
+            </xsd:complexType>
+        </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="requestheader">
+        <wsdl:part name="client" element="xrd:client" />
+        <wsdl:part name="service" element="xrd:service" />
+        <wsdl:part name="userId" element="xrd:userId" />
+        <wsdl:part name="id" element="xrd:id" />
+        <wsdl:part name="issue" element="xrd:issue" />
+        <wsdl:part name="protocolVersion" element="xrd:protocolVersion" />
+    </wsdl:message>
+
+    <wsdl:message name="fintoService">
+        <wsdl:part name="body" element="tns:fintoService"/>
+    </wsdl:message>
+    <wsdl:message name="fintoServiceResponse">
+        <wsdl:part name="body" element="tns:fintoServiceResponse"/>
+    </wsdl:message>
+    <wsdl:message name="finnaSearchService">
+        <wsdl:part name="body" element="tns:finnaSearchService"/>
+    </wsdl:message>
+    <wsdl:message name="finnaSearchServiceResponse">
+        <wsdl:part name="body" element="tns:finnaSearchServiceResponse"/>
+    </wsdl:message>
+    <wsdl:message name="finnaRecordService">
+        <wsdl:part name="body" element="tns:finnaRecordService"/>
+    </wsdl:message>
+    <wsdl:message name="finnaRecordServiceResponse">
+        <wsdl:part name="body" element="tns:finnaRecordServiceResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getFinnaRecord">
+        <wsdl:part name="body" element="tns:getFinnaRecord"/>
+    </wsdl:message>
+    <wsdl:message name="getFinnaRecordResponse">
+        <wsdl:part name="body" element="tns:getFinnaRecordResponse"/>
+    </wsdl:message>
+
+    <wsdl:portType name="xRoadPortType">
+        <wsdl:operation name="fintoService">
+            <wsdl:input message="tns:fintoService"/>
+            <wsdl:output message="tns:fintoServiceResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="finnaSearchService">
+            <wsdl:input message="tns:finnaSearchService"/>
+            <wsdl:output message="tns:finnaSearchServiceResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="finnaRecordService">
+            <wsdl:input message="tns:finnaRecordService"/>
+            <wsdl:output message="tns:finnaRecordServiceResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getFinnaRecord">
+            <wsdl:input message="tns:getFinnaRecord"/>
+            <wsdl:output message="tns:getFinnaRecordResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding name="xRoadBinding" type="tns:xRoadPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="fintoService">
+            <soap:operation soapAction="" style="document"/>
+            <id:version>v1</id:version>
+            <wsdl:input>
+                <soap:body parts="body" use="literal"/>
+                <soap:header message="tns:requestheader" part="client" use="literal"/>
+                <soap:header message="tns:requestheader" part="service" use="literal"/>
+                <soap:header message="tns:requestheader" part="userId" use="literal"/>
+                <soap:header message="tns:requestheader" part="id" use="literal"/>
+                <soap:header message="tns:requestheader" part="issue" use="literal"/>
+                <soap:header message="tns:requestheader" part="protocolVersion" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="body" use="literal"/>
+                <soap:header message="tns:requestheader" part="client" use="literal"/>
+                <soap:header message="tns:requestheader" part="service" use="literal"/>
+                <soap:header message="tns:requestheader" part="userId" use="literal"/>
+                <soap:header message="tns:requestheader" part="id" use="literal"/>
+                <soap:header message="tns:requestheader" part="issue" use="literal"/>
+                <soap:header message="tns:requestheader" part="protocolVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="finnaSearchService">
+            <soap:operation soapAction="" style="document"/>
+            <id:version>v1</id:version>
+            <wsdl:input>
+                <soap:body parts="body" use="literal"/>
+                <soap:header message="tns:requestheader" part="client" use="literal"/>
+                <soap:header message="tns:requestheader" part="service" use="literal"/>
+                <soap:header message="tns:requestheader" part="userId" use="literal"/>
+                <soap:header message="tns:requestheader" part="id" use="literal"/>
+                <soap:header message="tns:requestheader" part="issue" use="literal"/>
+                <soap:header message="tns:requestheader" part="protocolVersion" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="body" use="literal"/>
+                <soap:header message="tns:requestheader" part="client" use="literal"/>
+                <soap:header message="tns:requestheader" part="service" use="literal"/>
+                <soap:header message="tns:requestheader" part="userId" use="literal"/>
+                <soap:header message="tns:requestheader" part="id" use="literal"/>
+                <soap:header message="tns:requestheader" part="issue" use="literal"/>
+                <soap:header message="tns:requestheader" part="protocolVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="finnaRecordService">
+            <soap:operation soapAction="" style="document"/>
+            <id:version>v1</id:version>
+            <wsdl:input>
+                <soap:body parts="body" use="literal"/>
+                <soap:header message="tns:requestheader" part="client" use="literal"/>
+                <soap:header message="tns:requestheader" part="service" use="literal"/>
+                <soap:header message="tns:requestheader" part="userId" use="literal"/>
+                <soap:header message="tns:requestheader" part="id" use="literal"/>
+                <soap:header message="tns:requestheader" part="issue" use="literal"/>
+                <soap:header message="tns:requestheader" part="protocolVersion" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="body" use="literal"/>
+                <soap:header message="tns:requestheader" part="client" use="literal"/>
+                <soap:header message="tns:requestheader" part="service" use="literal"/>
+                <soap:header message="tns:requestheader" part="userId" use="literal"/>
+                <soap:header message="tns:requestheader" part="id" use="literal"/>
+                <soap:header message="tns:requestheader" part="issue" use="literal"/>
+                <soap:header message="tns:requestheader" part="protocolVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getFinnaRecord">
+            <soap:operation soapAction="" style="document"/>
+            <id:version>v1</id:version>
+            <wsdl:input>
+                <soap:body parts="body" use="literal"/>
+                <soap:header message="tns:requestheader" part="client" use="literal"/>
+                <soap:header message="tns:requestheader" part="service" use="literal"/>
+                <soap:header message="tns:requestheader" part="userId" use="literal"/>
+                <soap:header message="tns:requestheader" part="id" use="literal"/>
+                <soap:header message="tns:requestheader" part="issue" use="literal"/>
+                <soap:header message="tns:requestheader" part="protocolVersion" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="body" use="literal"/>
+                <soap:header message="tns:requestheader" part="client" use="literal"/>
+                <soap:header message="tns:requestheader" part="service" use="literal"/>
+                <soap:header message="tns:requestheader" part="userId" use="literal"/>
+                <soap:header message="tns:requestheader" part="id" use="literal"/>
+                <soap:header message="tns:requestheader" part="issue" use="literal"/>
+                <soap:header message="tns:requestheader" part="protocolVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:service name="provider-gateway">
+        <wsdl:port binding="tns:xRoadBinding" name="xRoadServicePort">
+            <soap:address location="http://localhost:8080/rest-gateway-0.0.9-SNAPSHOT/Provider"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
